@@ -18,6 +18,9 @@ class Header extends React.Component<PassedProps, any> {
       ]
     }
   }
+  componentDidMount () {
+    this.props.sayHello('test')
+  }
   render () {
     const { navs } = this.state
     return (
