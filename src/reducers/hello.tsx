@@ -4,6 +4,9 @@ import actions from '../actions'
 export default handleActions({
   [actions.sayHello.toString()]: (state, action) => {
     return { ...state,  ...action.payload }
+  },
+  GOT_HELLO: (state, action) => {
+    return { ...state, ...action.payload }
   }
 }, {
   text: '',

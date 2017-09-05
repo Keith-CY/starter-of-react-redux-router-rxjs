@@ -1,13 +1,18 @@
 import { createStore, applyMiddleware, compose, GenericStoreEnhancer } from 'redux'
-import { persistState } from 'redux-devtools'
+// import { persistState } from 'redux-devtools'
+import { createEpicMiddleware } from 'redux-observable'
 import reducer from '../reducers'
+import epics from '../epics'
+import { sayHello } from '../epics/hello'
 // import DevTools from '../containers/DevTools'
 
 declare const module, require
 declare const window
 
+const epicMiddleware = createEpicMiddleware(sayHello)
+
 const enhancer = compose(
-  // applyMiddleare(),
+  applyMiddleware(epicMiddleware),
   // DevTools.instrument() as GenericStoreEnhancer,
   // persistState(
   //   window.location.href.match(
