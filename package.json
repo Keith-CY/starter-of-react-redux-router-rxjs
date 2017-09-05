@@ -1,0 +1,51 @@
+{
+  "name": "starter-of-react-redux-router-rxjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Keith-CY/starter-of-react-redux-router-rxjs.git",
+  "author": "Keith <keithwhisper@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --config ./config/webpack.config.dev.js"
+  },
+  "devDependencies": {
+    "@types/react": "^16.0.5",
+    "@types/react-dom": "^15.5.4",
+    "@types/react-redux": "^5.0.6",
+    "@types/redux-actions": "^1.2.8",
+    "autoprefixer": "^7.1.3",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "bundle-loader": "^0.5.5",
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.3.0",
+    "html-webpack-plugin": "^2.30.1",
+    "node-sass": "^4.5.3",
+    "precss": "^2.0.0",
+    "redux-devtools": "^3.4.0",
+    "sass-loader": "^6.0.6",
+    "ts-loader": "^2.3.4",
+    "typescript": "next",
+    "webpack": "^3.5.5",
+    "webpack-dashboard": "^1.0.0-5",
+    "webpack-dev-server": "^2.7.1",
+    "webpack-merge": "^4.1.0"
+  },
+  "dependencies": {
+    "@types/react-router-dom": "^4.0.7",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-actions": "^2.2.1"
+  }
+}
