@@ -1,6 +1,6 @@
 import { combineEpics } from 'redux-observable'
-import * as helloEpic from './hello'
+import { sayHello } from './hello'
 
 export default combineEpics(
-  helloEpic,
+  sayHello,
 )

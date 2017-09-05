@@ -1,6 +1,12 @@
-import React, { Component } from 'react'
+// import React, { Component } from 'react'
+import * as React from 'react'
 
-class Bundle extends Component {
+interface PassedProps extends React.Props<any> {
+  load: any;
+  children: any;
+}
+
+class Bundle extends React.Component<PassedProps, any> {
   constructor () {
     super()
     this.state = {
@@ -10,9 +16,9 @@ class Bundle extends Component {
   componentWillMount () {
     this.load(this.props)
   }
-  componentWillReceiveProps (nexProps) {
+  componentWillReceiveProps (nextProps: {load: any}) {
     if (nextProps.load !== this.props.load) {
-      this.load(nexProps)
+      this.load(nextProps)
     }
   }
   load (props) {

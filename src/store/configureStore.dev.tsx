@@ -3,13 +3,13 @@ import { createStore, applyMiddleware, compose, GenericStoreEnhancer } from 'red
 import { createEpicMiddleware } from 'redux-observable'
 import reducer from '../reducers'
 import epics from '../epics'
-import { sayHello } from '../epics/hello'
+// import { sayHello } from '../epics/hello'
 // import DevTools from '../containers/DevTools'
 
 declare const module, require
 declare const window
 
-const epicMiddleware = createEpicMiddleware(sayHello)
+const epicMiddleware = createEpicMiddleware(epics)
 
 const enhancer = compose(
   applyMiddleware(epicMiddleware),

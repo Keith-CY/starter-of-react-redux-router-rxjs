@@ -8,7 +8,7 @@ const baseConfig = require('./webpack.config.base.js')
 
 const prodConfig = {
   entry: {
-    app: path.resolve(__dirname, '../src/app.jsx')
+    app: path.resolve(__dirname, '../src/app.tsx')
   },
   module: {
     rules: [
@@ -21,14 +21,14 @@ const prodConfig = {
               loader: 'css-loader',
               options: {
                 modules: true,
-                name: '[local]-[name]-[hash]'
-                imports: 3,
+                name: '[local]-[name]-[hash]',
+                importLoaders: 3,
               },
             },
             {
               loader: 'postcss-loader',
               options: {
-                config: path.resovle(__dirname, './config/postcss.config.json'),
+                config: path.resolve(__dirname, './config/postcss.config.json'),
               },
             },
             'resolve-url-loader',
@@ -47,11 +47,11 @@ const prodConfig = {
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'app',
-      filename: 'vendor-[hash].min.js',
+      filename: 'scripts/vendor-[hash].min.js',
     }),
     new HtmlPlugin({
       title: '生产',
-      template: path.resolve(__dirname, '../src/template/index.html'),
+      template: path.resolve(__dirname, '../src/templates/index.html'),
       minify: {
         collapseBooleanAttributes: true,
         collapseInlineTagWhitespace: true,

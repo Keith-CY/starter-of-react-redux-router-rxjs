@@ -2,8 +2,9 @@ const path = require('path')
 
 module.exports = {
   output: {
-    filename: '[name]-[hash].js',
-    chunkFilename: '[name]-[chunkhash].js',
+    path: path.resolve(__dirname, '../dist'),
+    filename: 'scripts/[name]-[hash].js',
+    chunkFilename: 'scripts/[name]-[chunkhash].js',
   },
   module: {
     rules: [
@@ -27,6 +28,6 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js', '.jsx', '.scss', '.css', '.json'],
+    extensions: ['.tsx', '.ts', '.jsx', '.js', '.scss', '.css', '.json'],
   }
 }

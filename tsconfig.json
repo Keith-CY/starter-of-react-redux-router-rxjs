@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "build/dist",
+    "outDir": "dist",
     "module": "commonjs",
     "target": "es5",
     "lib": ["es6", "dom"],
@@ -15,13 +15,11 @@
     "strictNullChecks": true
   },
   "exclude": [
+    "config",
     "node_modules",
-    "build",
-    "scripts",
-    "acceptance-tests",
+    "dist",
     "webpack",
-    "jest",
-    "src/setupTests.ts"
+    "jest"
   ],
   "types": [
     "typePatches"

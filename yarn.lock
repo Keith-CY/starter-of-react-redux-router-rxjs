@@ -12,11 +12,21 @@
   version "1.6.3"
   resolved "https://registry.npmjs.org/@most/prelude/-/prelude-1.6.3.tgz#4eb453acb3251c47b92daa98d1652b704501c027"
 
+"@types/express-serve-static-core@*":
+  version "4.0.50"
+  resolved "https://registry.npmjs.org/@types/express-serve-static-core/-/express-serve-static-core-4.0.50.tgz#c5a139b5d29d2305aae6d982f69cef36120beacf"
+  dependencies:
+    "@types/node" "*"
+
 "@types/history@*":
   version "4.6.0"
   resolved "https://registry.npmjs.org/@types/history/-/history-4.6.0.tgz#093d67ed780d889c9543f6dca24ebee0b6b9fc45"
 
-"@types/node@^8.0.26":
+"@types/mime@*":
+  version "1.3.1"
+  resolved "https://registry.npmjs.org/@types/mime/-/mime-1.3.1.tgz#2cf42972d0931c1060c7d5fa6627fce6bd876f2f"
+
+"@types/node@*", "@types/node@^8.0.26":
   version "8.0.26"
   resolved "https://registry.npmjs.org/@types/node/-/node-8.0.26.tgz#4d58be925306fd22b1141085535a0268b8beb189"
 
@@ -55,6 +65,43 @@
 "@types/redux-actions@^1.2.8":
   version "1.2.8"
   resolved "https://registry.npmjs.org/@types/redux-actions/-/redux-actions-1.2.8.tgz#ef8c3dd346cc5d10c30e9f23c9b2bf56a719b969"
+
+"@types/serve-static@*":
+  version "1.7.32"
+  resolved "https://registry.npmjs.org/@types/serve-static/-/serve-static-1.7.32.tgz#0f6732e4dab0813771dd8fc8fe14940f34728b4c"
+  dependencies:
+    "@types/express-serve-static-core" "*"
+    "@types/mime" "*"
+
+"@types/source-map@*":
+  version "0.5.1"
+  resolved "https://registry.npmjs.org/@types/source-map/-/source-map-0.5.1.tgz#7e74db5d06ab373a712356eebfaea2fad0ea2367"
+
+"@types/tapable@*":
+  version "0.2.4"
+  resolved "https://registry.npmjs.org/@types/tapable/-/tapable-0.2.4.tgz#8181a228da46185439300e600c5ae3b3b3982585"
+
+"@types/uglify-js@*":
+  version "2.6.29"
+  resolved "https://registry.npmjs.org/@types/uglify-js/-/uglify-js-2.6.29.tgz#521347f69e20201d218f5991ae66e10878afcf1a"
+  dependencies:
+    "@types/source-map" "*"
+
+"@types/webpack-dev-server@^2.4.1":
+  version "2.4.1"
+  resolved "https://registry.npmjs.org/@types/webpack-dev-server/-/webpack-dev-server-2.4.1.tgz#395edc2a368fd43f036f4e21945a1f1b4aaf50ec"
+  dependencies:
+    "@types/express-serve-static-core" "*"
+    "@types/serve-static" "*"
+    "@types/webpack" "*"
+
+"@types/webpack@*", "@types/webpack@^3.0.10":
+  version "3.0.10"
+  resolved "https://registry.npmjs.org/@types/webpack/-/webpack-3.0.10.tgz#1d27db07df32109f8c882535b547aae4252fd53e"
+  dependencies:
+    "@types/node" "*"
+    "@types/tapable" "*"
+    "@types/uglify-js" "*"
 
 abbrev@1:
   version "1.1.0"

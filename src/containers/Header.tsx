@@ -7,7 +7,7 @@ interface PassedProps extends React.Props<any> {
 }
 
 class Header extends React.Component<PassedProps, any> {
-  private goTo = goTo.bind(this)
+  protected goTo = goTo.bind(this)
   constructor () {
     super()
     this.state = {
