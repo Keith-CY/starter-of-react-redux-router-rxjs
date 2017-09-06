@@ -4,11 +4,12 @@ const merge = require('webpack-merge')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const HtmlPlugin = require('html-webpack-plugin')
+const SWPrecachePlugin = require('sw-precache-webpack-plugin')
 const baseConfig = require('./webpack.config.base.js')
 
 const prodConfig = {
   entry: {
-    app: path.resolve(__dirname, '../src/app.tsx')
+    app: path.resolve(__dirname, '../src/app.tsx'),
   },
   module: {
     rules: [
@@ -21,7 +22,7 @@ const prodConfig = {
               loader: 'css-loader',
               options: {
                 modules: true,
-                name: '[local]-[name]-[hash]',
+                name: '[local]-[name]-[hash:5]',
                 importLoaders: 3,
               },
             },
@@ -36,7 +37,7 @@ const prodConfig = {
           ],
         }),
       },
-    ]
+    ],
   },
   devtool: 'inline-source-map',
   plugins: [
@@ -47,7 +48,7 @@ const prodConfig = {
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'app',
-      filename: 'scripts/vendor-[hash].min.js',
+      filename: 'scripts/vendor-[hash:5].min.js',
     }),
     new HtmlPlugin({
       title: '生产',
@@ -63,13 +64,14 @@ const prodConfig = {
         removeEmptyAttributes: true,
         removeRedundantAttributes: true,
         removeTagWhitespace: true,
-      }
+      },
     }),
     new ExtractTextPlugin({
-      filename: 'styles/[name]-[contenthash].css',
+      filename: 'styles/[name]-[contenthash:5].css',
     }),
     new UglifyJSPlugin(),
-  ]
+    new SWPrecachePlugin(),
+  ],
 }
 
 module.exports = merge(baseConfig, prodConfig)

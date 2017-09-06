@@ -38,6 +38,7 @@
     "redux-devtools-log-monitor": "^1.3.0",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.6",
+    "sw-precache-webpack-plugin": "^0.11.4",
     "ts-loader": "^2.3.4",
     "typescript": "next",
     "uglifyjs-webpack-plugin": "^0.4.6",

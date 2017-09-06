@@ -3,8 +3,8 @@ const path = require('path')
 module.exports = {
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: 'scripts/[name]-[hash].js',
-    chunkFilename: 'scripts/[name]-[chunkhash].js',
+    filename: 'scripts/[name]-[hash:5].js',
+    chunkFilename: 'scripts/[name]-[chunkhash:5].js',
   },
   module: {
     rules: [
