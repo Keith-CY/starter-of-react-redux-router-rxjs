@@ -6,7 +6,7 @@
   "author": "Keith <keithwhisper@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --config ./config/webpack.config.dev.js",
+    "start": "webpack-dashboard -- webpack-dev-server --config ./config/webpack.config.dev.js",
     "build": "rimraf dist && webpack --config ./config/webpack.config.prod.js"
   },
   "devDependencies": {
