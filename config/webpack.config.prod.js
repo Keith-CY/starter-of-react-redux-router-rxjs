@@ -4,8 +4,11 @@ const merge = require('webpack-merge')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const HtmlPlugin = require('html-webpack-plugin')
+const fs = require('fs')
 const SWPrecachePlugin = require('sw-precache-webpack-plugin')
 const baseConfig = require('./webpack.config.base.js')
+
+const manifest = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../lib/manifest.json')))
 
 const prodConfig = {
   entry: {
@@ -47,12 +50,14 @@ const prodConfig = {
       },
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'app',
+      name: ['app'],
       filename: 'scripts/vendor-[hash:5].min.js',
     }),
     new HtmlPlugin({
       title: '生产',
       template: path.resolve(__dirname, '../src/templates/index.html'),
+      reactDll: `./lib/${manifest['react.js']}`,
+      rxjsDll: `./lib/${manifest['rxjs.js']}`,
       minify: {
         collapseBooleanAttributes: true,
         collapseInlineTagWhitespace: true,

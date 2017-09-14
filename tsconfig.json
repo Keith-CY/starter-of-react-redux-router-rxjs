@@ -8,7 +8,7 @@
     "allowJs": true,
     "jsx": "react",
     "moduleResolution": "node",
-    "rootDir": "src",
+    // "rootDir": "./src",
     "noImplicitReturns": true,
     "noImplicitThis": false,
     "noImplicitAny": false,
